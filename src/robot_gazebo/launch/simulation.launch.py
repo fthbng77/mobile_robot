@@ -34,6 +34,6 @@ def generate_launch_description():
         gz,
         bridge,
         Node(package='ros_gz_sim', executable='create',
-             arguments=['-topic', 'robot_description', '-name', 'mobile_robot', '-z', '0.15'],
+             arguments=['-topic', 'robot_description', '-name', 'mobile_robot', '-x', '0.0', '-y', '1.5', '-z', '0.15'],
              output='screen'),
     ])

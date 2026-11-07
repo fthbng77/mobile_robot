@@ -52,6 +52,7 @@ ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist \\
 | `/scan` | `sensor_msgs/msg/LaserScan` | Gazebo -> ROS | LiDAR mesafe verileri |
 | `/camera/image_raw` | `sensor_msgs/msg/Image` | Gazebo -> ROS | Ön kamera görüntüsü |
 | `/camera/camera_info` | `sensor_msgs/msg/CameraInfo` | Gazebo -> ROS | Kamera kalibrasyon bilgisi |
+| `/imu` | `sensor_msgs/msg/Imu` | Gazebo -> ROS | IMU yönelim, açısal hız ve ivme verisi |
 
 Aktif topic'leri kontrol etmek için:
 
@@ -60,6 +61,7 @@ ros2 topic list
 ros2 topic echo /scan
 ros2 topic echo /camera/image_raw
 ros2 topic echo /odom
+ros2 topic echo /imu
 ```
 
 ## Engelden kaçma davranışı
@@ -83,6 +85,7 @@ mesaj dönüşümünü sağlar. Mevcut bridge bağlantıları şunlardır:
 /scan
 /camera/image_raw
 /camera/camera_info
+/imu
 ```
 
 ## Paketler
@@ -100,5 +103,5 @@ mesaj dönüşümünü sağlar. Mevcut bridge bağlantıları şunlardır:
 - LiDAR ve ön kamera: entegre edildi
 - LiDAR tabanlı engelden kaçma: entegre edildi
 - RViz otomatik başlatma ve kayıtlı ayarlar: entegre edildi
-- IMU sensörü: eklenmesi gerekiyor
+- IMU sensörü: entegre edildi 
 - Temas sensörü: iki kişilik grup için isteğe bağlı

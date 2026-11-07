@@ -71,6 +71,29 @@ Visualization Manager:
       Normalize Range: true
       Min Value: 0
       Max Value: 1
+    - Class: rviz_imu_plugin/Imu
+      Enabled: true
+      Name: IMU
+      Topic:
+        Reliability Policy: Best Effort
+        History Policy: Keep Last
+        Durability Policy: Volatile
+        Value: /imu
+      Box properties:
+        Enable box: true
+        x_scale: 0.3
+        y_scale: 0.2
+        z_scale: 0.05
+        Box alpha: 0.6
+      Axes properties:
+        Enable axes: true
+        Axes scale: 0.3
+      Acceleration properties:
+        Enable acceleration: true
+        Derotate acceleration: true
+        Acc. vector scale: 0.05
+        Acc. vector color: 0; 255; 255
+        Acc. vector alpha: 1
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48

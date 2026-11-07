@@ -40,4 +40,4 @@ ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist \\
 - `robot_behavior`: sensor-based obstacle avoidance node.
 - `robot_bringup`: combined launch entry point.
 
-The LiDAR, camera, IMU, contact sensor and RViz integration are planned next.
+The LiDAR and front camera are integrated. IMU, contact sensor and RViz integration are planned next.

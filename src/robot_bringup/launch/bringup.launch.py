@@ -28,6 +28,7 @@ def generate_launch_description():
         arguments=['-d', PathJoinSubstitution([
             FindPackageShare('robot_bringup'), 'rviz', 'mobile_robot.rviz'
         ])],
+        parameters=[{'use_sim_time': True}],
         output='screen',
     )
     return LaunchDescription([description, simulation, behavior, rviz])

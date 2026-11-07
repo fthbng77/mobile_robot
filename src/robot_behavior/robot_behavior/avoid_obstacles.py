@@ -35,9 +35,11 @@ def main(args=None):
     except KeyboardInterrupt:
         pass
     finally:
-        node.publisher.publish(Twist())
+        if rclpy.ok():
+            node.publisher.publish(Twist())
         node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 if __name__ == '__main__':

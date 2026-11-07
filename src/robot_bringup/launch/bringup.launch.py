@@ -22,4 +22,12 @@ def generate_launch_description():
         executable='avoid_obstacles',
         output='screen',
     )
-    return LaunchDescription([description, simulation, behavior])
+    rviz = Node(
+        package='rviz2',
+        executable='rviz2',
+        arguments=['-d', PathJoinSubstitution([
+            FindPackageShare('robot_bringup'), 'rviz', 'mobile_robot.rviz'
+        ])],
+        output='screen',
+    )
+    return LaunchDescription([description, simulation, behavior, rviz])

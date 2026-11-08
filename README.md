@@ -53,6 +53,7 @@ ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist \\
 | `/camera/image_raw` | `sensor_msgs/msg/Image` | Gazebo -> ROS | Ön kamera görüntüsü |
 | `/camera/camera_info` | `sensor_msgs/msg/CameraInfo` | Gazebo -> ROS | Kamera kalibrasyon bilgisi |
 | `/imu` | `sensor_msgs/msg/Imu` | Gazebo -> ROS | IMU yönelim, açısal hız ve ivme verisi |
+| `/joint_states` | `sensor_msgs/msg/JointState` | Gazebo -> ROS | Teker eklem açıları |
 
 Aktif topic'leri kontrol etmek için:
 
@@ -86,6 +87,7 @@ mesaj dönüşümünü sağlar. Mevcut bridge bağlantıları şunlardır:
 /camera/image_raw
 /camera/camera_info
 /imu
+/joint_states
 ```
 
 ## Paketler

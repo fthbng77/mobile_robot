@@ -27,6 +27,7 @@ def generate_launch_description():
             '/camera/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
             '/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
             '/imu@sensor_msgs/msg/Imu[gz.msgs.IMU',
+            '/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model',
         ],
         output='screen',
     )
@@ -34,6 +35,6 @@ def generate_launch_description():
         gz,
         bridge,
         Node(package='ros_gz_sim', executable='create',
-             arguments=['-topic', 'robot_description', '-name', 'mobile_robot', '-z', '0.15'],
+             arguments=['-topic', 'robot_description', '-name', 'mobile_robot', '-x', '0.0', '-y', '1.5', '-z', '0.15'],
              output='screen'),
     ])
